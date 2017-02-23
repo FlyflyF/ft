@@ -1,0 +1,114 @@
+<html>
+<meta charset="UtF-8" />
+
+<head>
+    <title>用户注册</title>
+</head>
+
+<style type="text/css">
+    fieldset {
+        border: 1px solid #1E7ACE;
+        color: #1E7ACE;
+        width: 500px;
+        margin: auto;
+    }
+    
+    fieldset legend {
+        border: 1px solid #1E7ACE;
+        padding: 3px;
+    }
+    
+    fieldset div {
+        margin: 3px;
+        padding: 2px;
+    }
+    
+    label {
+        width: 180px;
+        float: left;
+        text-align: right;
+    }
+    
+    input {
+        text-align: left;
+        color: black;
+    }
+    
+    .buttondiv {
+        text-align: center;
+        color: black;
+    }
+    
+    .button {
+        background-color: #D0F0FF;
+        border: 1px solid #1E7ACE;
+    }
+    
+    select {
+        color: black;
+    }
+    
+    div span {
+        font-size: 12px;
+        color: red;
+    }
+</style>
+
+<body>
+    <form action="success.html" method="GET" onsubmit="return check()">
+        <fieldset>
+            <legend>
+                新用户注册
+            </legend>
+            <div>
+                <label>用户名：</label>
+                <input type="text" name="username" id="username" onblur="checkUsername()" />
+                <span id="usernameSpan"></span></div>
+            <div>
+                <label>密码：</label>
+                <input type="password" name="psw" id="password" onblur="checkPassword()" />
+                <span id="passwordSpan"></span></div>
+            <div>
+                <label>确认密码：</label>
+                <input type="password" name="ensurepsw" id="ensurePassword" onblur="checkEnsurePassword()" />
+                <span id="ensurePasswordSpan"></span></div>
+            <div>
+                <label> 邮箱：</label>
+                <input type="text" id="email" onblur="checkEmail()" />
+                <span id="emailSpan"></span></div>
+            <div>
+                <label>性别：</label>
+                <input type="radio" name="gender" value="male" checked="true" />男
+                <input type="radio" name="gender" value="female" />女
+                <!--<span id="genderSpan"></span>-->
+            </div>
+            <div>
+                <label>爱好：</label>
+                <input type="checkbox" name="hobby" value="eat" />吃
+                <input type="checkbox" name="hobby" value="drink" />喝
+                <input type="checkbox" name="hobby" value="play" />玩
+                <!--<span id="hobbySpan"></span>-->
+            </div>
+            <div>
+                <label>城市：</label>
+                <select id="city">
+                <option value="">请选择</option>
+                <option value="gz">广州</option>
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+            </select></div>
+            <div>
+                <label>上传头像：</label>
+                <input type="file" /></div>
+            <div>
+                <label> 自我介绍：</label>
+                <textarea cols="25" rows="5" name="myInfo" id="myInfo">请输入：</textarea></div>
+            <div class="buttondiv">
+                <input type="submit" value="提交" class="button" />
+                <input type="reset" value="重填" class="button" /></div>
+        </fieldset>
+    </form>
+    <script type="text/javascript" src="ft.js"></script>
+</body>
+
+</html>
